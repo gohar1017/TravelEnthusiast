@@ -1,0 +1,55 @@
+/* CKEditor Dark Mode Styles */
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+  background: #334155 !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+.ck.ck-editor__main>.ck-editor__editable.ck-focused {
+  background: #334155 !important;
+  color: #f8fafc !important;
+  border-color: #818cf8 !important;
+  box-shadow: 0 0 0 1px #818cf8 !important;
+}
+
+.ck.ck-toolbar {
+  background: #1e293b !important;
+  border-color: #475569 !important;
+}
+
+.ck.ck-button:not(.ck-disabled):hover, 
+.ck.ck-button.ck-on, 
+.ck.ck-dropdown__button.ck-on:hover, 
+.ck.ck-dropdown__button.ck-on {
+  background: #334155 !important;
+  color: #f8fafc !important;
+}
+
+.ck.ck-icon :not([fill]) {
+  fill: #f8fafc !important;
+}
+
+.ck.ck-button__label {
+  color: #f8fafc !important;
+}
+
+.ck.ck-dropdown__panel {
+  background: #1e293b !important;
+  border-color: #475569 !important;
+}
+
+.ck.ck-list__item:hover {
+  background: #334155 !important;
+}
+
+.ck.ck-input-text {
+  background: #334155 !important;
+  border-color: #475569 !important;
+  color: #f8fafc !important;
+}
+
+.ck.ck-input-text:focus {
+  border-color: #818cf8 !important;
+  box-shadow: 0 0 0 1px #818cf8 !important;
+}
+
