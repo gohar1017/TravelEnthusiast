@@ -17,6 +17,7 @@ const commentSchema = new mongoose.Schema({
   }
 });
 
+
 const travelLogSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -52,5 +53,6 @@ const travelLogSchema = new mongoose.Schema({
 }, {
   timestamps: true
 });
+
 
 module.exports = mongoose.model('TravelLog', travelLogSchema); 
