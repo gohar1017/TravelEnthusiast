@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const testUsers = require('../config/testUsers');
 
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/travel-network', {
   useNewUrlParser: true,
@@ -13,6 +14,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/travel-ne
   console.error('MongoDB connection error:', err);
   process.exit(1);
 });
+
 
 const seedUsers = async () => {
   try {
@@ -34,6 +36,7 @@ const seedUsers = async () => {
           password: hashedPassword
         });
 
+        
         console.log(`Created user: ${user.email}`);
 
         // Verify the user was created
@@ -42,11 +45,13 @@ const seedUsers = async () => {
           throw new Error(`Failed to create user: ${user.email}`);
         }
 
+        
         // Test password verification
         const isMatch = await bcrypt.compare(user.password, savedUser.password);
         if (!isMatch) {
           throw new Error(`Password verification failed for: ${user.email}`);
         }
+        
         console.log(`Password verification successful for: ${user.email}`);
       } catch (error) {
         console.error(`Error creating user ${user.email}:`, error);
@@ -54,6 +59,7 @@ const seedUsers = async () => {
       }
     }
 
+    
     // List all created users
     const allUsers = await User.find({});
     console.log('\nAll users in database:');
@@ -62,6 +68,7 @@ const seedUsers = async () => {
       console.log(`Email: ${user.email}`);
       console.log('-------------------');
     });
+    
 
     console.log('\nSeed completed successfully!');
     process.exit(0);
