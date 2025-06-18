@@ -44,6 +44,7 @@ const AppContent = () => {
                 <Profile />
               </ProtectedRoute>
             }
+            
           />
           <Route
             path="/logs/new"
@@ -62,6 +63,7 @@ const AppContent = () => {
   );
 };
 
+
 const App = () => {
   return (
     <Router>
@@ -73,5 +75,6 @@ const App = () => {
     </Router>
   );
 };
+
 
 export default App; 
