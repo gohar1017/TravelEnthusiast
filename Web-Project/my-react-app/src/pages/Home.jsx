@@ -19,13 +19,16 @@ const Home = () => {
   ];
 
   // Function to handle slide transition
-  const nextSlide = () => {
+  const nextSlide = () =>
+    {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+    
   };
 
-  const prevSlide = () => {
+  const prevSlide = () => 
+    {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+   };
 
   useEffect(() => {
     // Auto-advance slides every 5 seconds
