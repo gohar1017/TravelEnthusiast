@@ -33,7 +33,6 @@ const Register = () => {
       setIsLoading(false);
       return;
     }
-
     try {
       // Placeholder for the removed auth.register function
       const response = { data: { token: 'placeholder-token' } };
