@@ -8,6 +8,7 @@ const Login = () => {
     email: '',
     password: ''
   });
+  
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -26,6 +27,7 @@ const Login = () => {
     setError('');
     setLoading(true);
 
+    
     try {
       // Placeholder for the removed auth.login function
       const response = { token: 'placeholder-token', user: { username: 'placeholder-username' } };
@@ -45,6 +47,7 @@ const Login = () => {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="login-page">
@@ -57,6 +60,7 @@ const Login = () => {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           padding: 20px;
         }
+        
         .login-container {
           background: white;
           padding: 40px;
@@ -65,22 +69,27 @@ const Login = () => {
           width: 100%;
           max-width: 400px;
         }
+        
         .login-header {
           text-align: center;
           margin-bottom: 30px;
         }
+        
         .login-header h1 {
           color: #333;
           margin-bottom: 10px;
           font-size: 2rem;
         }
+        
         .login-header p {
           color: #666;
           font-size: 0.9rem;
         }
+        
         .form-group {
           margin-bottom: 20px;
         }
+        
         .form-group label {
           display: block;
           margin-bottom: 8px;
